@@ -119,6 +119,7 @@ class _RoulettePainter extends CustomPainter {
 
       canvas.save();
       canvas.rotate(drewSweep + pi / 2 + sweep / 2);
+      canvas.rotate(4.75);
 
       final text = unit.text;
       if (text == null) {
@@ -134,9 +135,9 @@ class _RoulettePainter extends CustomPainter {
       final p = pb.build();
       p.layout(const ui.ParagraphConstraints(width: double.infinity));
 
-      canvas.drawParagraph(p, Offset(-p.minIntrinsicWidth / 2, -radius * style.textLayoutBias));
-      //canvas.drawParagraph(p, Offset(-p.minIntrinsicWidth / 2 + 64, -radius * style.textLayoutBias + 144));
-      //canvas.drawParagraph(p, const Offset(30, -15));
+      //canvas.drawParagraph(p, Offset(-p.minIntrinsicWidth / 2, -radius * style.textLayoutBias));
+      canvas.drawParagraph(p, Offset(-p.minIntrinsicWidth / 2 + 60, -radius * style.textLayoutBias + 145));
+      //canvas.drawParagraph(p, const Offset(00, 0));
       canvas.restore();
 
       drewSweep += sweep;
